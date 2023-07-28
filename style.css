@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "montserrat", sans-serif;
+    background: #7240d6;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+.hero {
+    height: 100px;
+    background: white;
+    color: #000;
+    padding: 0 20px;
+}
+
+.logo {
+    float: left;
+    line-height: 100px;
+}
+
+.menus {
+    float: right;
+    line-height: 100px;
+}
+
+.menus a {
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 0 25px;
+    color: #000;
+    transition: 0.5s;
+}
+
+.menu-btn, .menu-btn2 {
+    transition: 0.5s;
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+}
+
+.menu-btn {
+    float: right;
+}
+
+.menu-btn span {
+    line-height: 100px;
+}
+
+.menus a:hover,.menu-btn:hover,.menu-btn2:hover {
+    opacity: 0.8;
+}
+
+#tah {
+    position: absolute;
+    z-index: -111;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    .menu-btn, .menu-btn2 {
+        display: block;
+    }
+    .menus {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background: #fe932e;
+        right: -100%;
+        top: 0;
+        padding: 80px 0;
+        text-align: center;
+        line-height: normal;
+        transition: 0.5s;
+    }
+    .menus a {
+        display: block;
+        padding: 25px;
+    }
+    .menu-btn2 {
+        position: absolute;
+        top: 40px;
+        right: 30px;
+    }
+    #tah:checked ~ .menus {
+        right: 0;
+    }
+}
+
